@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MOTION+SWAGG — Move Different.</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#080808;color:#f5f5f5;font-family:Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#080808ee;border-bottom:1px solid #292929}.nav{max-width:1200px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:900;letter-spacing:2px}.brand b{font-size:24px}.bag{background:#fff;color:#000;border:0;border-radius:20px;padding:10px 16px;font-weight:800}
+.hero{min-height:68vh;display:grid;place-items:center;text-align:center;padding:70px 20px;background:radial-gradient(circle,#292929,#080808 58%)}.hero small{letter-spacing:5px;color:#aaa}.hero h1{font-size:clamp(50px,10vw,110px);line-height:.85;letter-spacing:-5px;margin:20px 0}.hero p{color:#aaa}.cta{display:inline-block;margin-top:18px;background:#fff;color:#000;padding:14px 22px;text-decoration:none;font-weight:900}
+section{max-width:1200px;margin:auto;padding:55px 20px}.title{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.title h2{margin:0;font-size:32px}.title p{color:#888}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:#111;border:1px solid #292929}.visual{height:280px;display:grid;place-items:center;background:linear-gradient(145deg,#1b1b1b,#070707);font-size:50px;font-weight:900}.info{padding:17px}.info h3{margin:0 0 7px;font-size:16px}.price{color:#bbb;margin-bottom:12px}.info select,.info button{width:100%;padding:11px;margin-top:7px}.info select{background:#090909;color:#fff;border:1px solid #444}.info button{border:0;background:#fff;color:#000;font-weight:900;cursor:pointer}
+.about{background:#111;border-top:1px solid #292929;border-bottom:1px solid #292929;text-align:center}.about p{max-width:720px;margin:auto;color:#aaa;line-height:1.7}
+#cart{position:fixed;inset:0 0 0 auto;width:min(430px,100%);background:#111;z-index:20;transform:translateX(100%);transition:.25s;padding:22px;overflow:auto;border-left:1px solid #333}#cart.open{transform:none}.close{float:right;background:none;border:0;color:#fff;font-size:28px}.cart-item{border-bottom:1px solid #333;padding:13px 0}.cart-item small{color:#888}.qty{display:flex;gap:8px;align-items:center;margin-top:8px}.qty button{background:#222;color:#fff;border:1px solid #444;padding:4px 9px}.total{font-size:20px;font-weight:900;margin:20px 0}.form input,.form textarea{width:100%;padding:12px;margin:6px 0;background:#080808;color:#fff;border:1px solid #444}.pay{width:100%;padding:14px;background:#fff;color:#000;border:0;font-weight:900;margin-top:8px}.note{font-size:12px;color:#777;line-height:1.5}
+footer{text-align:center;color:#777;padding:30px;border-top:1px solid #222}
+
+.ms-logo{width:170px;height:auto;display:block;color:#fff}
+.hero-logo{width:min(300px,70vw);margin:0 auto 18px}
+.brand{display:flex;align-items:center}
+@media(max-width:520px){.ms-logo{width:145px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><a class="brand" href="#" aria-label="MOTION+SWAGG home">
+<svg class="ms-logo" viewBox="0 0 320 105" role="img" aria-label="MOTION+SWAGG logo">
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="5" d="M112 18 L128 8 L144 18 L160 8 L176 18 L192 8 L208 18" opacity=".9"/>
+    <path stroke-width="7" d="M121 21 L130 38 L144 25 L160 43 L176 25 L190 38 L199 21"/>
+  </g>
+  <text x="160" y="72" text-anchor="middle" fill="currentColor"
+        font-family="Arial Black, Arial, sans-serif" font-size="50" font-weight="900"
+        letter-spacing="-4">M+S</text>
+  <text x="160" y="96" text-anchor="middle" fill="currentColor"
+        font-family="Arial, sans-serif" font-size="11" font-weight="800"
+        letter-spacing="3">MOTION+SWAGG</text>
+</svg>
+</a><button class="bag" onclick="openCart()">BAG <span id="count">0</span></button></div></header>
+<div class="hero"><div>
+<svg class="ms-logo hero-logo" viewBox="0 0 320 105" role="img" aria-label="MOTION+SWAGG logo">
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="5" d="M112 18 L128 8 L144 18 L160 8 L176 18 L192 8 L208 18" opacity=".9"/>
+    <path stroke-width="7" d="M121 21 L130 38 L144 25 L160 43 L176 25 L190 38 L199 21"/>
+  </g>
+  <text x="160" y="72" text-anchor="middle" fill="currentColor"
+        font-family="Arial Black, Arial, sans-serif" font-size="50" font-weight="900"
+        letter-spacing="-4">M+S</text>
+  <text x="160" y="96" text-anchor="middle" fill="currentColor"
+        font-family="Arial, sans-serif" font-size="11" font-weight="800"
+        letter-spacing="3">MOTION+SWAGG</text>
+</svg>
+<small>MORE THAN CLOTHES. IT'S A MOVEMENT.</small><h1>MOVE<br>DIFFERENT.</h1><p>Limited releases • Nigerian streetwear • Built different</p><a class="cta" href="#shop">SHOP THE DROPS</a></div></div>
+
+<section id="shop"><div class="title"><div><h2>THE DROPS</h2><p>Choose a size, add to bag, then checkout.</p></div></div><div id="products" class="grid"></div></section>
+<section class="about"><h2>MOTION+SWAGG</h2><p>Every release changes the look while keeping the same M+S identity: crown, motion, plus and attitude.</p></section>
+
+<aside id="cart"><button class="close" onclick="closeCart()">×</button><h2>Your Bag</h2><div id="items"></div><div class="total">Total: ₦<span id="total">0</span></div>
+<div class="form"><input id="name" placeholder="Full name"><input id="email" type="email" placeholder="Email"><input id="phone" placeholder="Phone number"><textarea id="address" rows="3" placeholder="Delivery address"></textarea><input id="city" placeholder="City"><button class="pay" onclick="checkout()">PAY & PLACE ORDER</button><p class="note">You’ll be redirected to Flutterwave’s secure checkout. An adult/authorized business owner should set up and control the store’s payment account and keys.</p></div>
+</aside>
+<footer>© 2026 MOTION+SWAGG — MOVE DIFFERENT.</footer>
+
+<script>
+const products=[
+["r1tee","Release 01 — Graphic Tee",28000,"M+S"],["r1jog","Release 01 — Baggy Joggers",38000,"M+S"],
+["r2long","Release 02 — Long Sleeve",36000,"+"],["r2jort","Release 02 — Baggy Jorts",42000,"M+S"],
+["r3hood","Release 03 — Hoodie",52000,"M+S"],["r3jean","Release 03 — Baggy Jeans",48000,"M+S"],
+["r4set","Release 04 — Track Suit",85000,"M+S"],["r5set","Release 05 — Hoodie + Cargo Denim",90000,"M+S"],
+["r6jersey","Release 06 — Baggy Jersey",45000,"6"],["r6sock","Release 06 — Signature Socks",12000,"+"],
+["r6beanie","Release 06 — Beanie",15000,"M+S"],["r6mask","Release 06 — Ski Mask",18000,"M+S"]];
+let cart=JSON.parse(localStorage.getItem("ms_cart")||"[]");
+const money=n=>n.toLocaleString("en-NG");
+document.getElementById("products").innerHTML=products.map((p,i)=>`
+<article class="card"><div class="visual">${p[3]}</div><div class="info"><h3>${p[1]}</h3><div class="price">₦${money(p[2])}</div>
+<select id="size-${i}"><option value="">Size</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select>
+<button onclick="add(${i})">ADD TO BAG</button></div></article>`).join("");
+function add(i){let size=document.getElementById("size-"+i).value;if(!size){alert("Please choose a size.");return}cart.push({id:products[i][0],name:products[i][1],price:products[i][2],size});save();openCart()}
+function save(){localStorage.setItem("ms_cart",JSON.stringify(cart));render()}
+function render(){document.getElementById("count").textContent=cart.length;document.getElementById("items").innerHTML=cart.length?cart.map((x,i)=>`<div class="cart-item"><b>${x.name}</b><br><small>Size: ${x.size} • ₦${money(x.price)}</small><div class="qty"><button onclick="removeItem(${i})">Remove</button></div></div>`).join(""):"<p style='color:#777'>Your bag is empty.</p>";document.getElementById("total").textContent=money(cart.reduce((a,x)=>a+x.price,0))}
+function removeItem(i){cart.splice(i,1);save()}function openCart(){document.getElementById("cart").classList.add("open")}function closeCart(){document.getElementById("cart").classList.remove("open")}
+async function checkout(){if(!cart.length){alert("Your bag is empty.");return}let payload={customer:{name:name.value,email:email.value,phone:phone.value,address:address.value,city:city.value},items:cart};if(!payload.customer.name||!payload.customer.email||!payload.customer.phone||!payload.customer.address||!payload.customer.city){alert("Please complete your delivery details.");return}let r=await fetch("/api/checkout",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});let d=await r.json();if(!r.ok){alert(d.error||"Checkout could not start.");return}location.href=d.authorization_url}
+render();
+</script>
+</body></html>
